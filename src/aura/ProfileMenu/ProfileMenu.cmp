@@ -1,0 +1,33 @@
+<aura:component implements="forceCommunity:profileMenuInterface,forceCommunity:availableForAllPageTypes" access="global" controller="ThemeMenuController" extends="c:BaseComponent">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:attribute name="menuItems" type="Object[]" default="Profile settings, Log out"/>
+	<aura:attribute name="user" type="Object" access="public"/>
+	<aura:attribute name="userName" type="String" access="public"/>
+	<aura:attribute name="userAbbr" type="String" access="public"/>
+	<aura:attribute name="userId" type="String" access="public"/>
+
+	<div class="user-info">
+		<ui:menu >
+			<ui:menuTriggerLink aura:id="trigger" label="{!v.user.name}">
+				<div class="wrap-img">
+					<div class="user-first-symbol">
+						<span class="symbol">{!v.userAbbr}</span>
+					</div>
+				</div>
+				<div class="wrap-text">
+					<a href="#" class="text truncated">{!v.user.name}</a>
+				</div>
+				<span class="icon-svg-arrow-small-down-green"></span>
+			</ui:menuTriggerLink>
+			
+			<ui:menuList aura:id="actionMenu" class="user-info-submenu">
+<!-- 	        <div class="user-info-submenu"> -->
+				<aura:iteration items="{!v.menuItems}" var="item">
+					<ui:actionMenuItem aura:id="menu" click="{!c.handleClick}" hideMenuAfterSelected="false" class="user-info-submenu-item" label="{!item.label}">
+					</ui:actionMenuItem>
+				</aura:iteration>
+<!-- 		        </div> -->
+			</ui:menuList>
+		</ui:menu>
+	</div>
+</aura:component>

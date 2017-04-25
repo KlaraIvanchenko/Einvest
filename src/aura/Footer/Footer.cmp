@@ -1,0 +1,25 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+        <div class="container">
+            <div class="row clearfix">
+                <div class="column-lg-6 column-md-12 relative">
+                    <div class="wrap-logo">
+                        <a href="#" class="icon-svg-logo"></a>
+                    </div>
+                    <div class="wrap-text">
+                        <p class="copy">{!$Label.c.hFooterCopyRight}<br/>{!$Label.c.hFooterAllRightsReserved}</p>
+                    </div>
+                </div>
+                <div class="column-lg-6 column-md-12">
+                    <div class="soc-icons">
+                        <a href="#" class="icon-svg-soc-facebook"></a>
+                        <a href="#" class="icon-svg-soc-twitter"></a>
+                        <a href="#" class="icon-svg-soc-google"></a>
+                        <a href="#" class="icon-svg-soc-linkedin"></a>
+                        <a href="#" class="icon-svg-soc-instagram"></a>
+                    </div>
+                </div>
+            </div><!-- / .row -->
+        </div><!-- end of .container -->
+
+</aura:component>

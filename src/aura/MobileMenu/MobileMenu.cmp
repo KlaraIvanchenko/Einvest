@@ -1,0 +1,28 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	
+	<ui:menu >
+	    <ui:menuTriggerLink aura:id="trigger">
+		    <div class="menu-btn-mobile">
+		        <span class="line"></span>
+		        <span class="line"></span>
+		        <span class="line"></span>
+		    </div>
+	    </ui:menuTriggerLink>
+	    <ui:menuList aura:id="actionMenu">
+	    	<div class="header-r">
+	            <span class="icon-png-close close-btn-mobile"></span>
+	            <div class="header-r-inner">
+	                <div class="header-center">
+	                    <div class="wrap-header-menu">
+	                    	<c:NavigationMenu />
+	                        <!-- / ul.header-menu -->
+	                    </div><!-- / .wrap-header-menu -->
+	                </div><!-- / .header-center -->
+	                <div class="header-right">
+	                	<c:ProfileMenu />
+	                </div><!-- / .header-right -->
+	            </div><!-- / .header-r-inner -->
+	        </div><!-- / .header-r -->
+	    </ui:menuList>
+	</ui:menu>
+</aura:component>
