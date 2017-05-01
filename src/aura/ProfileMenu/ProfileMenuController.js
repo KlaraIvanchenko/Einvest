@@ -3,8 +3,11 @@
 		helper.initializeData(component, event);
 	},
 	handleClick : function(component, event, helper) {
-		var item  = event.getSource();
-		var selectedItem = item.get('v.label');
+		// var item  = event.getSource();
+		// var selectedItem = item.get('v.label');
+		//console.log('handleClick ++' );
+		var selectedItem = event.target.dataset.label;
+		//console.log('selectedItem ++' , selectedItem);
 		var menuItems = component.get('v.menuItems');
 
 		var navigateToUrl = '';

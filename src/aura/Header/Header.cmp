@@ -5,8 +5,8 @@
 		<div class="header-l">
 			<a href="#" class="icon-svg-logo"></a>
 		</div>
-		<div class="header-r">
-			<span class="icon-png-close close-btn-mobile"></span>
+		<div class="header-r" aura:id="menu">
+			<span class="icon-png-close close-btn-mobile" onclick="{!c.toggleMobileMenu}"></span>
 			<div class="header-r-inner">
 				<div class="header-center">
 					<div class="wrap-header-menu">
@@ -19,13 +19,13 @@
 				</div><!-- / .header-right -->
 			</div><!-- / .header-r-inner -->
 		</div><!-- / .header-r -->
-		<div class="header-r-mobile">
-				<c:MobileMenu />
-			<!-- <div class="menu-btn-mobile">
+		<div class="header-r-mobile" onclick="{!c.toggleMobileMenu}">
+				<!-- <c:MobileMenu /> -->
+			<div class="menu-btn-mobile">
 				<span class="line"></span>
 				<span class="line"></span>
 				<span class="line"></span>
-			</div> -->
+			</div>
 		</div>
 	</div>
 </aura:component>

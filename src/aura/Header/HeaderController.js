@@ -1,4 +1,5 @@
 ({
-	myAction : function(component, event, helper) {
+	toggleMobileMenu : function(component, event, helper) {
+		helper.toggleMenu(component, event);
 	}
 })
