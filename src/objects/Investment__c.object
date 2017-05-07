@@ -92,6 +92,18 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>Investment_stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Investment stage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Investment_Stage</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Ownership__c</fullName>
         <externalId>false</externalId>
         <label>Ownership</label>

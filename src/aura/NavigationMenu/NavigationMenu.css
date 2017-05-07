@@ -1,2 +1,10 @@
 .THIS .header-submenu{ display:none; }
 .THIS .header-menu-item:hover .header-submenu{ display:block; }
+/*.THIS .header-menu-item.active .header-submenu{ display:block; }*/
+
+@media only screen and (max-width: 1170px){
+    /*.THIS .header-submenu{ display: block; }*/
+    .THIS .header-submenu{ display: none; }
+    /*.THIS .header-menu-item.active .header-submenu{ display:block; }*/
+    .THIS .header-menu-item:hover .header-submenu{ display:block; }
+}

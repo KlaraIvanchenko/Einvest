@@ -1,0 +1,118 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="FundDetailsCtrl" extends="c:BaseComponent">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:attribute name="fund" type="Object" access="public"/>
+	<aura:attribute name="today" type="Date" access="public" />
+	 <div class="container p-vertical-35">
+        <h2 class="h2 text-center m-top-0 m-bottom-20">{!$Label.c.hFeaturedNews}</h2>
+        <h4 class="h4 text-center m-top-0 m-bottom-8">{!v.fund.Name}</h4>
+        <p class="helper-meta text-center m-top-0 m-bottom-25">
+        	<ui:outputDate format="MMMM d, yyyy" value="{!v.today}"/>
+		</p>
+
+        <div class="content-frame">
+            <div class="row row-with-horizontal-offsets clearfix m-bottom-15-md-down">
+                <div class="column-lg-4 column-sm-12 m-bottom-15 m-bottom-10-md-down">
+                    <div class="card-simple p-horizontal-0 p-vertical-0-md-down">
+                        <span class="text-simple color-green">{!$Label.c.fieldFirstClosingDate}</span>
+                        <span class="text-simple color-green">{!$Label.c.fieldVintageYear}</span>
+                    </div>
+                </div>
+                <div class="column-lg-8 column-sm-12 m-bottom-15">
+                    <div class="card-simple bg-palette-green">
+                        <span class="text-simple color-white">{!v.fund.First_Closing_Date__c}</span>
+                        <span class="text-simple color-white">{!v.fund.Vitnage_Year__c}</span>
+                    </div>
+                </div>
+            </div><!-- / .row -->
+
+            <div class="row row-with-horizontal-offsets clearfix m-bottom-15-md-down">
+                <div class="column-lg-4 column-sm-12 m-bottom-15 m-bottom-10-md-down">
+                    <div class="card-simple p-horizontal-0 p-vertical-0-md-down">
+                        <span class="text-simple">{!$Label.c.fieldTotalCommitment}</span>
+                    </div>
+                </div>
+                <div class="column-lg-8 column-sm-12 m-bottom-15">
+                    <div class="card-simple bg-xlightgrey">
+                        <span class="text-simple">{!$Locale.currency}1 billion</span>
+                    </div>
+                </div>
+            </div><!-- / .row -->
+
+            <div class="row row-with-horizontal-offsets clearfix m-bottom-15-md-down">
+                <div class="column-lg-4 column-sm-12 m-bottom-15 m-bottom-10-md-down">
+                    <div class="card-simple p-horizontal-0 p-vertical-0-md-down">
+                        <span class="text-simple color-blue">{!$Label.c.fieldTerm}</span>
+                    </div>
+                </div>
+                <div class="column-lg-8 column-sm-12 m-bottom-15">
+                    <div class="card-simple bg-palette-blue">
+                        <span class="text-simple color-white">{!v.fund.Term__c}</span>
+                    </div>
+                </div>
+            </div><!-- / .row -->
+
+            <div class="row row-with-horizontal-offsets clearfix m-bottom-15-md-down">
+                <div class="column-lg-4 column-sm-12 m-bottom-15 m-bottom-10-md-down">
+                    <div class="card-simple p-horizontal-0 p-vertical-0-md-down">
+                        <span class="text-simple">{!$Label.c.fieldInvestmentPeriod}</span>
+                    </div>
+                </div>
+                <div class="column-lg-8 column-sm-12 m-bottom-15">
+                    <div class="card-simple bg-xlightgrey">
+                        <span class="text-simple">{!v.fund.Investment_period_end_date__c}</span>
+                    </div>
+                </div>
+            </div><!-- / .row -->
+
+            <div class="row row-with-horizontal-offsets clearfix m-bottom-15-md-down">
+                <div class="column-lg-4 column-sm-12 m-bottom-15 m-bottom-10-md-down">
+                    <div class="card-simple p-horizontal-0 p-vertical-0-md-down">
+                        <span class="text-simple">{!$Label.c.fieldFundsDomicile}</span>
+                    </div>
+                </div>
+                <div class="column-lg-8 column-sm-12 m-bottom-15">
+                    <div class="card-simple bg-xlightgrey">
+                        <span class="text-simple">{!v.fund.Funds_domicile__c}</span>
+                    </div>
+                </div>
+            </div><!-- / .row -->
+
+            <div class="row row-with-horizontal-offsets clearfix m-bottom-15-md-down">
+                <div class="column-lg-4 column-sm-12 m-bottom-15 m-bottom-10-md-down">
+                    <div class="card-simple p-horizontal-0 p-vertical-0-md-down">
+                        <span class="text-simple">{!$Label.c.fieldLegalForm}</span>
+                    </div>
+                </div>
+                <div class="column-lg-8 column-sm-12 m-bottom-15">
+                    <div class="card-simple bg-xlightgrey">
+                    	 <ui:outputRichText value="{!v.fund.Legal_form__c}" />
+                    </div>
+                </div>
+            </div><!-- / .row -->
+
+            <div class="row row-with-horizontal-offsets clearfix m-bottom-15-md-down">
+                <div class="column-lg-4 column-sm-12 m-bottom-15 m-bottom-10-md-down">
+                    <div class="card-simple p-horizontal-0 p-vertical-0-md-down">
+                        <span class="text-simple">{!$Label.c.fieldStructure}</span>
+                    </div>
+                </div>
+                <div class="column-lg-8 column-sm-12 m-bottom-15">
+                	<ui:outputRichText value="{!v.fund.Structure__c}" />
+                </div>
+            </div><!-- / .row -->
+
+            <div class="row row-with-horizontal-offsets clearfix m-bottom-15-md-down">
+                <div class="column-lg-4 column-sm-12 m-bottom-15 m-bottom-10-md-down">
+                    <div class="card-simple p-horizontal-0 p-vertical-0-md-down">
+                        <span class="text-simple color-purple">{!$Label.c.fieldInvestmentFocusByStage}</span>
+                    </div>
+                </div>
+                <div class="column-lg-8 column-sm-12 m-bottom-15">
+                    <div class="card-simple bg-palette-purple">
+                    	<ui:outputRichText value="{!v.fund.Investment_focus_by_stage__c}" />
+                    </div>
+                </div>
+            </div><!-- / .row -->
+        </div><!-- / .content-frame -->
+    </div><!-- / .container -->
+</aura:component>

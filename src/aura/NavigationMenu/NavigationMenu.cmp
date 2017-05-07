@@ -2,13 +2,11 @@
 	<ul class="header-menu" onclick="{!c.onClick}">
 		<aura:iteration items="{!v.menuItems}" var="item" >
 			<aura:if isTrue="{!item.subMenu}">
-				<li class="header-menu-item clearfix">
+				<li class="header-menu-item clearfix" id="{!item.label}">
 					<a class="header-menu-link" href="">
-						<span class="wrap-icon">
-							<span class="{! 'icon-svg-' + item.label}"></span>
-						</span>
+						<c:NavigationMenuItemIcon label="{!item.label}"/>
 						<span class="wrap-text">
-							 <span class="text">{!item.label}</span>
+							 <span class="text" data-menu-item-label="{!item.label}" onclick="{!c.showSubmenu}">{!item.label}</span>
 						</span>
 					</a>
 					<span class="wrap-nav-arrow">
@@ -18,9 +16,7 @@
 						<aura:iteration items="{!item.subMenu}" var="subItem">
 							<li class="header-submenu-item">
 								<a href="" class="header-submenu-link">
-					                <span class="wrap-icon">
-                                        <span class="{! 'icon-svg-' + subItem.label}"></span>
-                                    </span>
+                                    <c:NavigationMenuItemIcon label="{!subItem.label}"/>
 									<span class="wrap-text">
 										<span class="text" data-menu-item-id="{!subItem.id}">{!subItem.label}</span>
 									</span>
@@ -34,9 +30,7 @@
 				<aura:set attribute="else">
 					<li class="header-menu-item clearfix">
 						<a class="header-menu-link" href="">
-							<span class="wrap-icon">
-					            <span class="{! 'icon-svg-' + item.label}"></span>
-					        </span>
+					        <c:NavigationMenuItemIcon label="{!item.label}"/>
 							<span class="wrap-text">
 								<span class="text" data-menu-item-id="{!item.id}">{!item.label}</span>
 							</span>

@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>fieldFirstClosingDate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fieldFirstClosingDate</shortDescription>
+        <value>First Closing Date</value>
+    </labels>
+    <labels>
+        <fullName>fieldFundsDomicile</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fieldFundsDomicile</shortDescription>
+        <value>Funds Domicile</value>
+    </labels>
+    <labels>
+        <fullName>fieldInvestmentFocusByStage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fieldInvestmentFocusByStage</shortDescription>
+        <value>Investment focus by stage</value>
+    </labels>
+    <labels>
+        <fullName>fieldInvestmentPeriod</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fieldInvestmentPeriod</shortDescription>
+        <value>Investment Period</value>
+    </labels>
+    <labels>
+        <fullName>fieldLegalForm</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fieldLegalForm</shortDescription>
+        <value>Legal Form</value>
+    </labels>
+    <labels>
+        <fullName>fieldStructure</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fieldStructure</shortDescription>
+        <value>Structure</value>
+    </labels>
+    <labels>
+        <fullName>fieldTerm</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fieldTerm</shortDescription>
+        <value>Term</value>
+    </labels>
+    <labels>
+        <fullName>fieldTotalCommitment</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fieldTotalCommitment</shortDescription>
+        <value>Total Commitment</value>
+    </labels>
+    <labels>
+        <fullName>fieldVintageYear</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fieldVintageYear</shortDescription>
+        <value>Vintage Year</value>
+    </labels>
+    <labels>
         <fullName>hFooterAllRightsReserved</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -13,5 +76,26 @@
         <protected>true</protected>
         <shortDescription>hFooterCopyRight</shortDescription>
         <value>&amp;copy; 2017 - EInvest by Advanced communities</value>
+    </labels>
+    <labels>
+        <fullName>lnkLogOut</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>lnkLogOut</shortDescription>
+        <value>Log out</value>
+    </labels>
+    <labels>
+        <fullName>lnkMyProfile</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>lnkMyProfile</shortDescription>
+        <value>My profile</value>
+    </labels>
+    <labels>
+        <fullName>lnkMySettings</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>lnkMySettings</shortDescription>
+        <value>My settings</value>
     </labels>
 </CustomLabels>

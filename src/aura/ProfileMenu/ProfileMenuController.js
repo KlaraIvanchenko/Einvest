@@ -1,8 +1,8 @@
 ({
-	doInit : function(component, event, helper) {
+	doInit: function(component, event, helper) {
 		helper.initializeData(component, event);
 	},
-	handleClick : function(component, event, helper) {
+	handleClick: function(component, event, helper) {
 		// var item  = event.getSource();
 		// var selectedItem = item.get('v.label');
 		//console.log('handleClick ++' );
@@ -17,5 +17,8 @@
 			}
 		});
 		helper.gotoURL(component, event, navigateToUrl);
+	},
+	toggleProfileLinks: function(component, event, helper) {
+		helper.toggleElement(component, event, 'profileTrigger', 'active');
 	}
 })

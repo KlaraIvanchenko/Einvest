@@ -1,0 +1,11 @@
+<aura:component > <!--implements="forceCommunity:availableForAllPageTypes" access="global"-->
+	<aura:attribute name="menuItem" type="Object" access="global"/>
+	<a class="header-menu-link" href="">
+		<span class="wrap-icon">
+			<span class="{! 'icon-svg-' + menuItem.label}"></span>
+		</span>
+		<span class="wrap-text">
+			 <span class="text" data-menu-item-label="{!menuItem.label}" onclick="{!c.showSubmenu}">{!menuItem.label}</span>
+		</span>
+	</a>
+</aura:component>

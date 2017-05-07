@@ -20,5 +20,10 @@
 			});
 			$A.enqueueAction(actionToExecute);
 		});
+	},
+	toggleElement: function(component, event, id, toggleClass) {
+		console.log('toggleElement');
+		var element = component.find(id);
+		$A.util.toggleClass(element, toggleClass);
 	}
 })

@@ -1,2 +1,15 @@
-.THIS {
+.THIS .user-info-submenu{
+    display: none;
+}
+.THIS .wrap-text-n-submenu:hover .user-info-submenu{
+    display: block;
+}
+
+/*.THIS .wrap-text-n-submenu.active .user-info-submenu{
+    display: block;
+}*/
+@media only screen and (max-width: 1170px){
+    .THIS .user-info-submenu.active{
+        display: block;
+    }
 }
