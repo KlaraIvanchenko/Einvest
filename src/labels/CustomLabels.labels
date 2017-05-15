@@ -64,6 +64,13 @@
         <value>Vintage Year</value>
     </labels>
     <labels>
+        <fullName>hFeaturedNews</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>hFeaturedNews</shortDescription>
+        <value>Featured news</value>
+    </labels>
+    <labels>
         <fullName>hFooterAllRightsReserved</fullName>
         <language>en_US</language>
         <protected>true</protected>

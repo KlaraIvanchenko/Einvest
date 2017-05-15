@@ -1,5 +1,6 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
 	<aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+	<aura:handler name="closeMenu" event="c:ToggleMenuEvent" action="{!c.toggleMobileMenu}"/>
 
 	<div class="container clearfix">
 		<div class="header-l">
@@ -9,18 +10,17 @@
 			<span class="icon-png-close close-btn-mobile" onclick="{!c.toggleMobileMenu}"></span>
 			<div class="header-r-inner">
 				<div class="header-center">
-					<div class="wrap-header-menu">
+					<!-- <div class="wrap-header-menu"> -->
 						<c:NavigationMenu />
 						<!-- / ul.header-menu -->
-					</div><!-- / .wrap-header-menu -->
+					<!-- </div>--><!-- / .wrap-header-menu -->
 				</div><!-- / .header-center -->
 				<div class="header-right">
 					<c:ProfileMenu />
 				</div><!-- / .header-right -->
 			</div><!-- / .header-r-inner -->
 		</div><!-- / .header-r -->
-		<div class="header-r-mobile" onclick="{!c.toggleMobileMenu}">
-				<!-- <c:MobileMenu /> -->
+		<div class="header-r-mobile" aura:id="mobileMenu" onclick="{!c.toggleMobileMenu}">
 			<div class="menu-btn-mobile">
 				<span class="line"></span>
 				<span class="line"></span>

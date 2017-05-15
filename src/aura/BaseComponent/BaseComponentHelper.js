@@ -22,8 +22,14 @@
 		});
 	},
 	toggleElement: function(component, event, id, toggleClass) {
-		console.log('toggleElement');
+		console.log('base toggleElement');
 		var element = component.find(id);
 		$A.util.toggleClass(element, toggleClass);
-	}
+	},
+	isMobileView : function() {
+		if ($A.get("$Browser.isPhone") || $A.get("$Browser.isTablet")) {
+				return true;
+		}
+		return false;
+	},
 })

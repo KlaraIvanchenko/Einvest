@@ -5,6 +5,7 @@
 	<aura:attribute name="userName" type="String" access="public"/>
 	<aura:attribute name="userAbbr" type="String" access="public"/>
 	<aura:attribute name="userId" type="String" access="public"/>
+	<aura:registerEvent name="closeMenu" type="c:ToggleMenuEvent"/>
 
 	<div class="user-info">
 		<div class="wrap-img">
@@ -24,7 +25,7 @@
                             <span class="text" data-label="{!item.label}" onclick="{!c.handleClick}">{!item.label}</span>
                         </a>
                     </li>
-                </aura:iteration> 
+                </aura:iteration>
             </ul>
         </div>
 	</div>

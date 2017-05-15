@@ -3,11 +3,7 @@
 		helper.initializeData(component, event);
 	},
 	handleClick: function(component, event, helper) {
-		// var item  = event.getSource();
-		// var selectedItem = item.get('v.label');
-		//console.log('handleClick ++' );
 		var selectedItem = event.target.dataset.label;
-		//console.log('selectedItem ++' , selectedItem);
 		var menuItems = component.get('v.menuItems');
 
 		var navigateToUrl = '';
@@ -19,6 +15,8 @@
 		helper.gotoURL(component, event, navigateToUrl);
 	},
 	toggleProfileLinks: function(component, event, helper) {
+		event.preventDefault();
 		helper.toggleElement(component, event, 'profileTrigger', 'active');
+		return false;
 	}
 })
