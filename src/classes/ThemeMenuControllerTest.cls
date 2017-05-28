@@ -1,12 +1,11 @@
 /**
 * @description Test class for ThemeMenuController
 *
-* @author kiv
+* @author: Klara Ivanchenko
 */
 @isTest
 private class ThemeMenuControllerTest
 {
-
     /*
         Will be used to create test data
     */

@@ -38,7 +38,6 @@
 		});
 		urlEvent.fire();
 		if (this.isMobileView()) {
-			console.log('isMobileView gotoURL');
 			var cmpEvent = component.getEvent("closeMenu");
 			cmpEvent.fire();
 		}

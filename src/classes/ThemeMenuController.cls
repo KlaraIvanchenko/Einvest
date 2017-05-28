@@ -8,7 +8,10 @@ public with sharing class ThemeMenuController
 	@AuraEnabled
 	public static AuraUserInfo getUserInfo()
 	{
-		return new AuraUserInfo(UserService.getCurrentUser());
+		//return new AuraUserInfo(UserService.getCurrentUser());
+		return new AuraUserInfo(
+			(new UsersSelector()).selectById(
+				new Set<Id>{userinfo.getUserId()}).get(0));
 	}
 
 	/* description
