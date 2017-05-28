@@ -1,43 +1,54 @@
 <aura:component extends="forceCommunity:navigationMenuBase" implements="forceCommunity:availableForAllPageTypes" access="global">
-	<ul class="header-menu" onclick="{!c.onClick}">
-		<aura:iteration items="{!v.menuItems}" var="item" >
-			<aura:if isTrue="{!item.subMenu}">
-				<li class="header-menu-item clearfix" id="{!item.label}">
-					<a class="header-menu-link" href="">
-						<c:NavigationMenuItemIcon label="{!item.label}"/>
-						<span class="wrap-text">
-							 <span class="text" data-menu-item-label="{!item.label}" onclick="{!c.showSubmenu}">{!item.label}</span>
-						</span>
-					</a>
-					<span class="wrap-nav-arrow">
-						<span class="arrow icon-svg-arrow-thin-down-white"></span>
-					</span>
-					<ul class="header-submenu">
-						<aura:iteration items="{!item.subMenu}" var="subItem">
-							<li class="header-submenu-item">
-								<a href="" class="header-submenu-link">
-                                    <c:NavigationMenuItemIcon label="{!subItem.label}"/>
-									<span class="wrap-text">
-										<span class="text" data-menu-item-id="{!subItem.id}">{!subItem.label}</span>
-									</span>
-								</a>
-							</li>
-						</aura:iteration>
-					</ul>
-				</li>
-				<!-- <div class="clearfix"></div> -->
+	<aura:attribute name="isMenuSizeSet" type="Boolean" required="false"/>
+	<aura:handler event="aura:doneRendering" action="{!c.doneRender}"/>
+	<aura:registerEvent name="showBigMenu" type="c:BigMenuEvent"/>
+	<aura:registerEvent name="closeMenu" type="c:ToggleMenuEvent"/>
 
-				<aura:set attribute="else">
-					<li class="header-menu-item clearfix">
+	<div class="wrap-header-menu" aura:id="wrapHeaderMenu">
+		<ul class="header-menu" onclick="{!c.navigationClick}">
+			<aura:iteration items="{!v.menuItems}" var="item" >
+				<aura:if isTrue="{!item.subMenu}">
+					<li class="header-menu-item clearfix" aura:id="menuItem" data-menu-id="{!item.label}">
 						<a class="header-menu-link" href="">
-					        <c:NavigationMenuItemIcon label="{!item.label}"/>
+							<c:NavigationMenuItemIcon label="{!item.label}"/>
 							<span class="wrap-text">
-								<span class="text" data-menu-item-id="{!item.id}">{!item.label}</span>
+								 <span class="text" data-menu-item-label="{!item.label}" onclick="{!c.showSubmenu}">{!item.label}</span>
 							</span>
 						</a>
+						<span class="wrap-nav-arrow">
+							<span class="arrow icon-svg-arrow-thin-down-white"></span>
+						</span>
+						<ul class="header-submenu">
+							<aura:iteration items="{!item.subMenu}" var="subItem">
+								<li class="header-submenu-item">
+									<a href="" class="header-submenu-link">
+	                  <c:NavigationMenuItemIcon label="{!subItem.label}"/>
+										<span class="wrap-text">
+											<span class="text" data-menu-item-id="{!subItem.id}">{!subItem.label}</span>
+										</span>
+									</a>
+								</li>
+							</aura:iteration>
+						</ul>
 					</li>
-				</aura:set>
-			</aura:if>
-		</aura:iteration>
-	</ul>
+
+					<aura:set attribute="else">
+						<li class="header-menu-item clearfix" aura:id="menuItem">
+							<a class="header-menu-link" href="">
+						        <c:NavigationMenuItemIcon label="{!item.label}"/>
+								<span class="wrap-text">
+									<span class="text" data-menu-item-id="{!item.id}">{!item.label}</span>
+								</span>
+							</a>
+						</li>
+					</aura:set>
+				</aura:if>
+			</aura:iteration>
+		</ul>
+	</div><!-- / .wrap-header-menu -->
+	<div class="menu-btn-hamburger" onclick="{!c.openMenu}">
+		<span class="line"></span>
+		<span class="line"></span>
+		<span class="line"></span>
+	</div>
 </aura:component>

@@ -1,5 +1,6 @@
 <aura:component implements="forceCommunity:themeLayout" access="global" description="Sample Custom Theme Layout">
 	<ltng:require styles="{!$Resource.Styles + '/css/styles.css'}" />
+
 	<aura:attribute name="search" type="Aura.Component[]" required="false"/>
 	<aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
 	<aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
@@ -7,8 +8,10 @@
 	<aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
 	<aura:attribute name="footer" type="Aura.Component[]" required="false"/>
 
+	<aura:handler name="showBigMenu" event="c:BigMenuEvent" action="{!c.showBigMenu}" includeFacets="true"/>
+
 <div>
-	<div class="body-inner"> 
+	<div class="body-inner">
 		<div class="wrapper-for-sticky-footer-structure">
 <!--   	        <div class="navigation">
 				{!v.navBar}
@@ -27,7 +30,7 @@
 			</div>
 			<div class="empty-block-for-sticky-footer"></div>
 		</div>
-	   
+
 		<footer class="footer">
 			{!v.footer}
 		</footer>

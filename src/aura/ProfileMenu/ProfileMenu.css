@@ -12,4 +12,7 @@
     .THIS .user-info-submenu.active{
         display: block;
     }
+    .THIS .wrap-text-n-submenu:hover .user-info-submenu{
+        display: none;
+    }
 }
