@@ -12,7 +12,6 @@
 	},
 	toggleElement : function(component, event, id, toggleClass) {
 		console.log('toggleElement');
-		//var element = document.getElementById(id);
 		var element = component.find(id);
 		$A.util.toggleClass(element, toggleClass);
 	},
@@ -37,9 +36,12 @@
 		if (!component.get("v.isMenuSizeSet") && (!isMobileView || window.innerWidth > 1170)) {
 				var headerMenuItemAllWidth = 0;
 				var headerMenuItemAll = component.find("menuItem");
-				headerMenuItemAll.forEach(function(item){
-					headerMenuItemAllWidth += item.getElement().offsetWidth;
-				});
+
+				if (typeof headerMenuItemAll != 'undefined') {
+					headerMenuItemAll.forEach(function(item) {
+						headerMenuItemAllWidth += item.getElement().offsetWidth;
+					});
+				}
 				var wrapHeaderMenuElWidth = component.find("wrapHeaderMenu").getElement().offsetWidth;
 
 				if (headerMenuItemAllWidth >= wrapHeaderMenuElWidth) {
